@@ -1,3 +1,13 @@
 header {
   background-color: #FF9900;
 }
+
+.card {
+  height: 100%;
+  cursor: pointer;
+}
+
+.card-img-top {
+  object-fit: contain;
+  height: 400px;
+}
