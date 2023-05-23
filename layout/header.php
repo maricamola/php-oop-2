@@ -1,5 +1,5 @@
 <header>
   <div class="container p-2 text-center">
-    <h2>Animalstore</h2>
+    <h2>Boolanimal Store</h2>
   </div>
 </header>

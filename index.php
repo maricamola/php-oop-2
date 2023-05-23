@@ -1,5 +1,10 @@
 <?php
 require_once 'models/Prodotto.php';
+include __DIR__ . '/layout/header.php';
+include __DIR__ . '/layout/head.php';
+// include  'models/Cani.php';
+// include  'models/Gatti.php';
+
 
 $prodotti = [
   new Prodotto('models/immagini/cibo.jpg', 'Cibo gusto pollo', 'Cani', '69.99€'),
@@ -9,9 +14,6 @@ $prodotti = [
   new Prodotto('models/immagini/gioco.jpg', 'Gioco in legno per pareti', 'Gatti', '5.99€'),
   new Prodotto('models/immagini/cuccia2.jpg', 'Cuccia in legno da esterno', 'Cani', '29.99€'),
 ];
-
-include __DIR__ . '/layout/header.php';
-include __DIR__ . '/layout/head.php';
 
 ?>
 
@@ -26,7 +28,7 @@ include __DIR__ . '/layout/head.php';
       <div class="card-body">
         <h5 class="card-title"><?php $prodotto->getNome(); ?></h5>
         <p class="card-text"><?php $prodotto->getPrezzo(); ?></p>
-        <p class="card-text"><?php $prodotto->getMarca(); ?></p>
+        <p class="card-text"><?php $prodotto->getCategoria(); ?></p>
         <a href="#" class="btn btn-primary">Acquista</a>
       </div>
     </div>

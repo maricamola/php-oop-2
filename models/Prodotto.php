@@ -5,15 +5,15 @@ class Prodotto
   private $immagine;
   private $nome;
   private $prezzo;
-  private $marca;
+  private $categoria;
   protected $discount = 40;
 
-  function __construct($_immagine, $_nome, $_marca, $_prezzo)
+  function __construct($_immagine, $_nome, $_categoria, $_prezzo)
   {
     $this->setImmagine($_immagine);
     $this->setNome($_nome);
     $this->setPrezzo($_prezzo);
-    $this->setMarca($_marca);
+    $this->setCategoria($_categoria);
   }
 
   //SET per impostare valore alle proprietà
@@ -26,10 +26,9 @@ class Prodotto
     //Controllo che sia un numero
     $this->prezzo = $_prezzo;
   }
-  public function setMarca($_marca)
+  public function setCategoria($_categoria)
   {
-    //Controllo che non sia più lungo di 255 caratteri
-    $this->marca = $_marca;
+    $this->categoria = $_categoria;
   }
   public function setImmagine($_immagine)
   {
@@ -47,9 +46,9 @@ class Prodotto
   {
     echo $this->prezzo;
   }
-  public function getMarca()
+  public function getCategoria()
   {
-    echo $this->marca;
+    echo $this->categoria;
   }
   public function getNome()
   {
